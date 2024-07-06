@@ -185,13 +185,13 @@ class Tomarket:
         print(f"{black}[{now}]{reset} {msg}{reset}")
 
     def main(self):
-        self.clear_terminal()
-        print(self.banner)
-        data = open(data_file, "r").read().splitlines()
-        num_acc = len(data)
-        self.log(self.line)
-        self.log(f"{green}Numer of account: {white}{num_acc}")
         while True:
+            self.clear_terminal()
+            print(self.banner)
+            data = open(data_file, "r").read().splitlines()
+            num_acc = len(data)
+            self.log(self.line)
+            self.log(f"{green}Numer of account: {white}{num_acc}")
             end_at_list = []
             for no, data in enumerate(data):
                 self.log(self.line)
@@ -299,7 +299,7 @@ class Tomarket:
                 now = datetime.now().timestamp()
                 wait_times = [end_at - now for end_at in end_at_list if end_at > now]
                 if wait_times:
-                    wait_time = min(wait_times)
+                    wait_time = min(wait_times) + 30
                 else:
                     wait_time = 15 * 60
             else:
