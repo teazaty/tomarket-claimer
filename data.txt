@@ -1,1 +1,1 @@
-user=
+user=%7B%22id%22%3A1320125276%2C%22first_name%22%3A%22Wanzaty%20%28Onmi.io%29%F0%9F%A6%B4%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22wanzaty%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=2878041041056818624&chat_type=sender&auth_date=1724440378&hash=833eca6f64fffc694dd1cce8206f32faba1352e0c8153fc303a640a378a391e5
