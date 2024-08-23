@@ -294,32 +294,7 @@ class Tomarket:
                 except Exception as e:
                     self.log(f"{red}Get auth data error!!!")
 
-            print()
-            if end_at_list:
-                now = datetime.now().timestamp()
-                wait_times = [end_at - now for end_at in end_at_list if end_at > now]
-                if wait_times:
-                    wait_time = min(wait_times) + 30
-                else:
-                    wait_time = 15 * 60
-            else:
-                wait_time = 15 * 60
-
-            wait_hours = int(wait_time // 3600)
-            wait_minutes = int((wait_time % 3600) // 60)
-            wait_seconds = int(wait_time % 60)
-
-            wait_message_parts = []
-            if wait_hours > 0:
-                wait_message_parts.append(f"{wait_hours} hours")
-            if wait_minutes > 0:
-                wait_message_parts.append(f"{wait_minutes} minutes")
-            if wait_seconds > 0:
-                wait_message_parts.append(f"{wait_seconds} seconds")
-
-            wait_message = ", ".join(wait_message_parts)
-            self.log(f"{yellow}Wait for {wait_message}!")
-            time.sleep(wait_time)
+            break
 
 
 if __name__ == "__main__":
